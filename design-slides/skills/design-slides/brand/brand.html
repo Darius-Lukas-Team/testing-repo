@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HE Brand Reference</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Primary palette */
+      --color-primary: #4F30FE;
+      --color-primary-light: #DAB3FF;
+      --color-primary-dark: #262DFF;
+      --color-accent: #DAB3FF;
+
+      /* Dark theme */
+      --color-bg: #000000;
+      --color-text: #ffffff;
+      --color-text-light: rgba(255,255,255,0.7);
+      --color-text-dim: rgba(255,255,255,0.4);
+      --color-card-bg: rgba(255, 255, 255, 0.06);
+      --color-card-border: rgba(79, 48, 254, 0.2);
+      --color-card-border-hover: rgba(79, 48, 254, 0.4);
+
+      /* Light theme */
+      --color-bg-light: #F9F9F9;
+      --color-text-dark: #000000;
+      --color-text-dark-muted: rgba(0, 0, 0, 0.6);
+      --color-card-bg-light: #ffffff;
+      --color-card-border-light: rgba(0, 0, 0, 0.08);
+
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, #DAB3FF, #262DFF);
+      --gradient-reverse: linear-gradient(135deg, #262DFF, #DAB3FF);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(79,48,254,0.03), rgba(38,45,255,0.04));
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 40px 120px;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 80px;
+      padding-top: 40px;
+    }
+
+    .page-header h1 {
+      font-size: 50px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .page-header p {
+      font-size: 16px;
+      color: rgba(0,0,0,0.45);
+      font-weight: 400;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #4F30FE;
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* 1. Color Swatches */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .swatch {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .swatch-color {
+      height: 100px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      padding: 14px 16px;
+    }
+
+    .swatch-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #000000;
+    }
+
+    .swatch-hex {
+      font-size: 12px;
+      color: rgba(0,0,0,0.45);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* 2. Gradient Samples */
+    .gradient-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .gradient-bar {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .gradient-sample {
+      height: 56px;
+      flex: 1;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .gradient-label {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    .gradient-label-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 2px;
+    }
+
+    .gradient-label-value {
+      font-size: 11px;
+      color: rgba(0,0,0,0.35);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* Gradient text demo */
+    .gradient-text-demo {
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-text-demo {
+      color: #4F30FE;
+    }
+
+    /* 3. Typography Scale */
+    .type-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .type-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .type-meta {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    .type-meta-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4F30FE;
+      margin-bottom: 4px;
+    }
+
+    .type-meta-spec {
+      font-size: 11px;
+      color: rgba(0,0,0,0.35);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      line-height: 1.6;
+    }
+
+    .type-sample {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* 4. Surface Colors */
+    .surface-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .surface-card {
+      padding: 32px;
+      border-radius: 16px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .surface-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .surface-card-value {
+      font-size: 12px;
+      color: rgba(0,0,0,0.45);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    /* 5. Button styles */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #DAB3FF, #262DFF);
+      color: #ffffff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .button-showcase {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .button-spec {
+      font-size: 14px;
+      color: rgba(0,0,0,0.45);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      line-height: 1.8;
+    }
+
+    /* 6. Text color & gradient demos */
+    .text-demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .text-demo-card {
+      padding: 32px;
+      border-radius: 16px;
+      min-height: 180px;
+    }
+
+    .text-demo-card h3 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .text-demo-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* 7. Spacing Reference */
+    .spacing-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .spacing-label {
+      width: 120px;
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0,0,0,0.6);
+    }
+
+    .spacing-value {
+      width: 60px;
+      flex-shrink: 0;
+      font-size: 12px;
+      color: rgba(0,0,0,0.35);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      text-align: right;
+    }
+
+    .spacing-bar {
+      height: 24px;
+      background: linear-gradient(135deg, rgba(79,48,254,0.2), rgba(79,48,254,0.15));
+      border-radius: 4px;
+      border: 1px solid rgba(79,48,254,0.15);
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>HE Brand Reference</h1>
+      <p>Visual design system for Hyper AI University</p>
+    </div>
+
+    <!-- 1. Color Swatches -->
+    <div class="section">
+      <div class="section-title">Color Swatches</div>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #4F30FE;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Brand Purple</div>
+            <div class="swatch-hex">#4F30FE</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #DAB3FF;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Light Purple</div>
+            <div class="swatch-hex">#DAB3FF</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #262DFF;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Deep Blue</div>
+            <div class="swatch-hex">#262DFF</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">White</div>
+            <div class="swatch-hex">#ffffff</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #000000;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Black</div>
+            <div class="swatch-hex">#000000</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #F9F9F9; border: 1px solid rgba(0,0,0,0.08);"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Off-White</div>
+            <div class="swatch-hex">#F9F9F9</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #FF268B;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Hot Pink</div>
+            <div class="swatch-hex">#FF268B</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #22c55e;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Bright Green</div>
+            <div class="swatch-hex">#22c55e</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #ff462e;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Coral</div>
+            <div class="swatch-hex">#ff462e</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Gradient Samples -->
+    <div class="section">
+      <div class="section-title">Gradient Samples</div>
+      <div class="gradient-list">
+        <div class="gradient-bar">
+          <div class="gradient-label">
+            <div class="gradient-label-name">Lavender-to-Blue</div>
+            <div class="gradient-label-value">135deg, #DAB3FF, #262DFF</div>
+          </div>
+          <div class="gradient-sample" style="background: linear-gradient(135deg, #DAB3FF, #262DFF);"></div>
+        </div>
+        <div class="gradient-bar">
+          <div class="gradient-label">
+            <div class="gradient-label-name">Purple Warm</div>
+            <div class="gradient-label-value">135deg, #DAB3FF, #4F30FE</div>
+          </div>
+          <div class="gradient-sample" style="background: linear-gradient(135deg, #DAB3FF, #4F30FE);"></div>
+        </div>
+        <div class="gradient-bar">
+          <div class="gradient-label">
+            <div class="gradient-label-name">Purple Fade</div>
+            <div class="gradient-label-value">135deg, #4F30FE, rgba(79,48,254,0.3)</div>
+          </div>
+          <div class="gradient-sample" style="background: linear-gradient(135deg, #4F30FE, rgba(79,48,254,0.3));"></div>
+        </div>
+        <div class="gradient-bar">
+          <div class="gradient-label">
+            <div class="gradient-label-name">Lavender Fade</div>
+            <div class="gradient-label-value">135deg, #DAB3FF, rgba(218,179,255,0.3)</div>
+          </div>
+          <div class="gradient-sample" style="background: linear-gradient(135deg, #DAB3FF, rgba(218,179,255,0.3));"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Typography Scale -->
+    <div class="section">
+      <div class="section-title">Typography Scale — Headings (DM Sans Semibold)</div>
+      <div class="type-list">
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H1</div>
+            <div class="type-meta-spec">50px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 50px; font-weight: 600; line-height: 1.2;">
+            Headline H1
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H2</div>
+            <div class="type-meta-spec">42px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 42px; font-weight: 600; line-height: 1.2;">
+            Headline H2
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H3</div>
+            <div class="type-meta-spec">30px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 30px; font-weight: 600; line-height: 1.3;">
+            Headline H3
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H4</div>
+            <div class="type-meta-spec">23px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 23px; font-weight: 600; line-height: 1.3;">
+            Headline H4
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H5</div>
+            <div class="type-meta-spec">19px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 19px; font-weight: 600; line-height: 1.3;">
+            Headline H5
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">H6</div>
+            <div class="type-meta-spec">16px<br>weight 600</div>
+          </div>
+          <div class="type-sample" style="font-size: 16px; font-weight: 600; line-height: 1.3;">
+            Headline H6
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Body Text Scale -->
+    <div class="section">
+      <div class="section-title">Typography Scale — Body (DM Sans Regular)</div>
+      <div class="type-list">
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">Body</div>
+            <div class="type-meta-spec">16px<br>weight 400</div>
+          </div>
+          <div class="type-sample" style="font-size: 16px; font-weight: 400; line-height: 1.6; color: rgba(0,0,0,0.6);">
+            Body text is used for paragraph content, descriptions, and supporting information. One AI-powered worker equals the output of five humans.
+          </div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta">
+            <div class="type-meta-name">Small</div>
+            <div class="type-meta-spec">14px<br>weight 400</div>
+          </div>
+          <div class="type-sample" style="font-size: 14px; font-weight: 400; line-height: 1.6; color: rgba(0,0,0,0.6);">
+            70% of workflows run fully autonomous; middle managers disappear. Used for captions and secondary descriptions.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Color & Gradient Demos -->
+    <div class="section">
+      <div class="section-title">Text Colors & Gradient Text</div>
+      <div class="text-demo-grid">
+        <!-- Dark background demo -->
+        <div class="text-demo-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08);">
+          <h3>Get the AI Workforce That <span class="gradient-text-demo">Automates 90% of Your Business</span></h3>
+          <p style="color: rgba(0,0,0,0.6);">Gradient text on dark background — used for highlight phrases in headings.</p>
+        </div>
+        <!-- Light background demo -->
+        <div class="text-demo-card" style="background: #F9F9F9; border: 1px solid rgba(0,0,0,0.08);">
+          <h3>Think of them as <span class="accent-text-demo">your private AI intelligence briefings,</span> built to give you clarity.</h3>
+          <p style="color: rgba(0,0,0,0.5);">Accent color text on light background — used for emphasis phrases.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="section">
+      <div class="section-title">Buttons</div>
+      <div class="button-showcase">
+        <a href="#" class="btn-primary">Become a Member <span>&#9654;</span></a>
+        <div class="button-spec">
+          gradient: #DAB3FF → #262DFF<br>
+          font: 18px / 600<br>
+          padding: 16px 32px<br>
+          radius: 10px
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Surface Colors -->
+    <div class="section">
+      <div class="section-title">Surface Colors</div>
+      <div class="surface-grid">
+        <div class="surface-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08);">
+          <div class="surface-card-name">Card Background</div>
+          <div class="surface-card-value">rgba(255, 255, 255, 0.06)</div>
+        </div>
+        <div class="surface-card" style="background: #f5f5f5; border: 1px solid rgba(0,0,0,0.08);">
+          <div class="surface-card-name">Card Background Alt</div>
+          <div class="surface-card-value">rgba(255, 255, 255, 0.04)</div>
+        </div>
+        <div class="surface-card" style="background: #ffffff; border: 2px solid rgba(79,48,254,0.2);">
+          <div class="surface-card-name">Card Border</div>
+          <div class="surface-card-value">rgba(79, 48, 254, 0.2)</div>
+        </div>
+        <div class="surface-card" style="background: #ffffff; border: 2px solid rgba(79,48,254,0.4);">
+          <div class="surface-card-name">Card Border Hover</div>
+          <div class="surface-card-value">rgba(79, 48, 254, 0.4)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Surface Colors — Light Theme -->
+    <div class="section">
+      <div class="section-title">Surface Colors — Light Theme</div>
+      <div class="light-section-demo">
+        <div class="surface-grid">
+          <div class="surface-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div class="surface-card-name">Card on Light Background</div>
+            <div class="surface-card-value">bg: #ffffff / border: rgba(0,0,0,0.08)</div>
+          </div>
+          <div class="surface-card" style="background: #F9F9F9; border: 1px solid rgba(0,0,0,0.08);">
+            <div class="surface-card-name">Section Background</div>
+            <div class="surface-card-value">#F9F9F9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stacked Text Pattern -->
+    <div class="section">
+      <div class="section-title">Stacked Text Pattern</div>
+      <div class="text-demo-grid">
+        <!-- Left-aligned on light -->
+        <div class="text-demo-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); min-height: 280px;">
+          <h3 style="font-size: 23px; margin-bottom: 16px;">These aren't blog posts or random tips. Think of them as <span class="gradient-text-demo">your private AI intelligence briefings,</span> built to give you the clarity and edge most people will miss.</h3>
+          <p style="color: rgba(0,0,0,0.5); margin-bottom: 20px;">The result? <span class="accent-text-demo">In just 10 minutes a week,</span> you'll always know what's worth paying attention to.</p>
+          <a href="#" class="btn-primary" style="font-size: 16px; padding: 14px 28px;">Become a Member <span>&#9654;</span></a>
+        </div>
+        <!-- Center-aligned on light -->
+        <div class="text-demo-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.08); text-align: center; min-height: 280px;">
+          <h3 style="font-size: 23px; margin-bottom: 16px;">These aren't blog posts or random tips. Think of them as <span class="gradient-text-demo">your private AI intelligence briefings,</span> built to give you the clarity and edge most people will miss.</h3>
+          <p style="color: rgba(0,0,0,0.5); margin-bottom: 20px;">The result? <span class="accent-text-demo">In just 10 minutes a week,</span> you'll always know what's worth paying attention to.</p>
+          <a href="#" class="btn-primary" style="font-size: 16px; padding: 14px 28px;">Become a Member <span>&#9654;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Spacing Reference -->
+    <div class="section">
+      <div class="section-title">Spacing Reference</div>
+      <div class="spacing-list">
+        <div class="spacing-row">
+          <div class="spacing-label">XS</div>
+          <div class="spacing-value">8px</div>
+          <div class="spacing-bar" style="width: 8px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Small</div>
+          <div class="spacing-value">16px</div>
+          <div class="spacing-bar" style="width: 16px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Medium</div>
+          <div class="spacing-value">24px</div>
+          <div class="spacing-bar" style="width: 24px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Large</div>
+          <div class="spacing-value">32px</div>
+          <div class="spacing-bar" style="width: 32px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">XL</div>
+          <div class="spacing-value">48px</div>
+          <div class="spacing-bar" style="width: 48px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">2XL</div>
+          <div class="spacing-value">64px</div>
+          <div class="spacing-bar" style="width: 64px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">3XL</div>
+          <div class="spacing-value">80px</div>
+          <div class="spacing-bar" style="width: 80px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Section Gap</div>
+          <div class="spacing-value">120px</div>
+          <div class="spacing-bar" style="width: 120px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Page Padding</div>
+          <div class="spacing-value">40px</div>
+          <div class="spacing-bar" style="width: 40px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Card Padding</div>
+          <div class="spacing-value">32px</div>
+          <div class="spacing-bar" style="width: 32px;"></div>
+        </div>
+        <div class="spacing-row">
+          <div class="spacing-label">Card Radius</div>
+          <div class="spacing-value">16px</div>
+          <div class="spacing-bar" style="width: 16px; border-radius: 8px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(0,0,0,0.06); color: rgba(0,0,0,0.25); font-size: 14px;">
+      Hyper AI University — Hyper Entrepreneurship — hyperentrepreneurship.com
+    </div>
+
+  </div>
+</body>
+</html>

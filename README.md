@@ -34,3 +34,11 @@ Diagnose funnels, build low-ticket offers, and design upsell stacks.
 - `funnel-diagnosis` — Identify the weakest funnel stage
 - `low-ticket-offer-builder` — Suggest a low-ticket offer concept
 - `upsell-stack-designer` — Suggest an upsell sequence
+
+### Design Slides
+Generate scrollable HTML slide pages optimized for screen-recording video content (YouTube, VSL, Webinar).
+
+**Skills:**
+- `design-slides` — Create polished single-file HTML slide pages from an outline. Supports YouTube videos, Video Sales Letters, and Webinar presentations. Output saves to your Desktop and auto-opens in your browser.
+
+**Requires Claude Code enabled in your Claude app.**

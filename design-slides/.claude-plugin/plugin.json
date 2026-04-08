@@ -1,0 +1,9 @@
+{
+  "name": "demo-design-slides",
+  "description": "Demo: Design Slides — Generate scrollable HTML slide pages for screen-recording videos (YouTube, VSL, Webinar)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Darius-Lukas-Team"
+  },
+  "keywords": ["slides", "presentation", "video", "youtube", "vsl", "webinar", "html", "screen-recording"]
+}

@@ -21,6 +21,12 @@
       "source": "./client-acquisition",
       "description": "Diagnose funnels, build low-ticket offers, and design upsell stacks",
       "version": "1.0.0"
+    },
+    {
+      "name": "demo-design-slides",
+      "source": "./design-slides",
+      "description": "Generate scrollable HTML slide pages for screen-recording videos (YouTube, VSL, Webinar)",
+      "version": "1.0.0"
     }
   ]
 }
