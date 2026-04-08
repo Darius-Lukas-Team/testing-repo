@@ -5,19 +5,19 @@
   },
   "plugins": [
     {
-      "name": "sales-copywriter",
+      "name": "Demo: Sales Copywriter",
       "source": "./sales-copywriter",
       "description": "Generate ad hooks, audit sales pages, and position offers",
       "version": "1.0.0"
     },
     {
-      "name": "content-engine",
+      "name": "Demo: Content Engine",
       "source": "./content-engine",
       "description": "Create YouTube shorts scripts, LinkedIn posts, and repurpose blog content",
       "version": "1.0.0"
     },
     {
-      "name": "client-acquisition",
+      "name": "Demo: Client Acquisition",
       "source": "./client-acquisition",
       "description": "Diagnose funnels, build low-ticket offers, and design upsell stacks",
       "version": "1.0.0"
