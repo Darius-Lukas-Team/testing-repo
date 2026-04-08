@@ -1,0 +1,9 @@
+{
+  "name": "content-engine",
+  "description": "Create YouTube shorts scripts, LinkedIn posts, and repurpose blog content",
+  "version": "1.0.0",
+  "author": {
+    "name": "Darius-Lukas-Team"
+  },
+  "keywords": ["content", "youtube", "linkedin", "blog", "repurpose"]
+}

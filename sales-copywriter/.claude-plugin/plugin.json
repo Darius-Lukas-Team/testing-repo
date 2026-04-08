@@ -1,0 +1,9 @@
+{
+  "name": "sales-copywriter",
+  "description": "Generate ad hooks, audit sales pages, and position offers",
+  "version": "1.0.0",
+  "author": {
+    "name": "Darius-Lukas-Team"
+  },
+  "keywords": ["sales", "copywriting", "ads", "marketing"]
+}

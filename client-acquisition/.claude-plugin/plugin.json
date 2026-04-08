@@ -1,0 +1,9 @@
+{
+  "name": "client-acquisition",
+  "description": "Diagnose funnels, build low-ticket offers, and design upsell stacks",
+  "version": "1.0.0",
+  "author": {
+    "name": "Darius-Lukas-Team"
+  },
+  "keywords": ["funnels", "offers", "upsells", "acquisition"]
+}
