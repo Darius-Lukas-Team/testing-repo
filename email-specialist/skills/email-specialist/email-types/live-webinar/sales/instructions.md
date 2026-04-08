@@ -12,7 +12,7 @@ Sent to **people who registered** for the webinar/webclass (both attendees and n
 - CTA embedded inside the narrative — never a bolted-on pitch block
 - Sign off as "Best, Darius" or just "Darius"
 - Use British English spelling throughout
-- Apply all style rules from `darius-lukas-voice-guidelines.md` (formatting, tone, punctuation)
+- Apply all style rules from `voice-guidelines.md` (formatting, tone, punctuation)
 - If the user provides stories, testimonials, or client quotes, use them. Do not invent any
 
 ## Formatting Rules

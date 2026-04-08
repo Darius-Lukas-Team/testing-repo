@@ -13,7 +13,7 @@ Who receives these emails? What's their relationship to the product/offer?
 
 ## Tone & Voice
 - What's the specific tone for this email type? (This section is the primary authority for structure and content)
-- Apply all style rules from `darius-lukas-voice-guidelines.md` (formatting, tone, punctuation)
+- Apply all style rules from `voice-guidelines.md` (formatting, tone, punctuation)
 - If the user provides stories or testimonials, use them. Do not invent any
 
 ## Formatting Rules

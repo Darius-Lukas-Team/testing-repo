@@ -14,7 +14,7 @@ Sent to the **entire email list**. Assume a mix of cold and warm subscribers. So
 - One sentence per paragraph, liberal use of ellipsis (…), lowercase subject lines
 - Sign off as "Best, Darius" or just "Darius"
 - Use British English spelling throughout
-- Apply all style rules from `darius-lukas-voice-guidelines.md` (formatting, tone, punctuation)
+- Apply all style rules from `voice-guidelines.md` (formatting, tone, punctuation)
 - If the user provides a personal story or anecdote, use it as the opening. If not, open directly with the hook — do not invent a story
 
 ## Formatting Rules

@@ -43,10 +43,10 @@ Generate scrollable HTML slide pages optimized for screen-recording video conten
 
 **Requires Claude Code enabled in your Claude app.**
 
-### Write Emails
+### Email Specialist
 Write high-converting email sequences in Darius Lukas's voice and store them to Notion.
 
 **Skills:**
-- `write-emails` — Generate full email sequences (invite, showup, sales, lead magnet promo) with 10 emails per sequence by default. All emails are automatically saved to your Notion workspace as a structured database.
+- `email-specialist` — Generate full email sequences (invite, showup, sales, lead magnet promo) with 10 emails per sequence by default. All emails are automatically saved to your Notion workspace as a structured database.
 
 **Requires Notion connected as a Connector in your Claude app.**

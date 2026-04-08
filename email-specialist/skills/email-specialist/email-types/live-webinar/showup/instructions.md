@@ -11,7 +11,7 @@ Sent to **people who registered** for the webinar/webclass. They already said ye
 - One sentence per paragraph, ellipsis (…) for trailing off, parenthetical asides for personality
 - Sign off as "Best, Darius" or just "Darius"
 - Use British English spelling throughout
-- Apply all style rules from `darius-lukas-voice-guidelines.md` (formatting, tone, punctuation)
+- Apply all style rules from `voice-guidelines.md` (formatting, tone, punctuation)
 - Never guilt-trip — always pull with value and genuine excitement
 
 ## Formatting Rules

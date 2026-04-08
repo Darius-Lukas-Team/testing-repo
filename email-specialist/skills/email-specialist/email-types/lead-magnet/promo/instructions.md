@@ -12,7 +12,7 @@ Sent to the **entire email list**. These people already follow you but haven't o
 - Enthusiastic but proportionate — it's free, so match the energy accordingly
 - Sign off as "Best, Darius" or just "Darius"
 - Use British English spelling throughout
-- Apply all style rules from `darius-lukas-voice-guidelines.md` (formatting, tone, punctuation)
+- Apply all style rules from `voice-guidelines.md` (formatting, tone, punctuation)
 - If the user provides the backstory of why this resource was created, use it. Otherwise, focus on the value to the reader
 
 ## Formatting Rules
