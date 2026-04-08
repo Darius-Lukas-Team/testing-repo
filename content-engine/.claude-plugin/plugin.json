@@ -1,6 +1,6 @@
 {
-  "name": "Demo: Content Engine",
-  "description": "Create YouTube shorts scripts, LinkedIn posts, and repurpose blog content",
+  "name": "demo-content-engine",
+  "description": "Demo: Content Engine — Create YouTube shorts scripts, LinkedIn posts, and repurpose blog content",
   "version": "1.0.0",
   "author": {
     "name": "Darius-Lukas-Team"
