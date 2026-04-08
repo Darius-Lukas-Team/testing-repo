@@ -42,3 +42,11 @@ Generate scrollable HTML slide pages optimized for screen-recording video conten
 - `design-slides` — Create polished single-file HTML slide pages from an outline. Supports YouTube videos, Video Sales Letters, and Webinar presentations. Output saves to your Desktop and auto-opens in your browser.
 
 **Requires Claude Code enabled in your Claude app.**
+
+### Write Emails
+Write high-converting email sequences in Darius Lukas's voice and store them to Notion.
+
+**Skills:**
+- `write-emails` — Generate full email sequences (invite, showup, sales, lead magnet promo) with 10 emails per sequence by default. All emails are automatically saved to your Notion workspace as a structured database.
+
+**Requires Notion connected as a Connector in your Claude app.**
